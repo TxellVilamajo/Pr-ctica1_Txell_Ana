@@ -14,6 +14,27 @@
 // APARTAT 1: Amb l’enviament del missatge pel port sèrie i utilitzant les funcions d’Arduino.
 /* 
 void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);  // Configurar el pin como salida
+  Serial.begin(115200);          // Inicializar la comunicaciÃ³n serial
+}
+
+void loop() {
+  // Encender el LED
+  digitalWrite(LED_BUILTIN, HIGH);  
+  Serial.println("ON");            // Enviar "ON" por el puerto serial
+
+
+  // Apagar el LED
+  digitalWrite(LED_BUILTIN, LOW);  
+  Serial.println("OFF");           // Enviar "OFF" por el puerto serial
+}
+*/
+
+
+// ----------------------------------------------------------------------------------------------------------------
+// APARTAT 2:  Amb l’enviament del missatge pel port sèrie i accedint directament als registres
+/*
+void setup() {
   // Establir el pin com a sortida directament a travÃ©s dels registres
   pinMode(LED_PIN, OUTPUT); // AixÃ² segueix sent necessari
   Serial.begin(115200);     // Inicialitzar la comunicaciÃ³ sÃ¨rie
@@ -30,29 +51,6 @@ void loop() {
   *gpio_out &= ~(1 << LED_PIN); // Desactivar el bit corresponent al pin 2
   Serial.println("OFF");        // Enviar "OFF" pel port sÃ¨rie
   }
-
-*/
-
-
-// ----------------------------------------------------------------------------------------------------------------
-// APARTAT 2:  Amb l’enviament del missatge pel port sèrie i accedint directament als registres
-/*
-void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);  // Configurar el pin como salida
-  Serial.begin(115200);          // Inicializar la comunicaciÃ³n serial
-}
-
-void loop() {
-  // Encender el LED
-  digitalWrite(LED_BUILTIN, HIGH);  
-  Serial.println("ON");            // Enviar "ON" por el puerto serial
-
-
-  // Apagar el LED
-  digitalWrite(LED_BUILTIN, LOW);  
-  Serial.println("OFF");           // Enviar "OFF" por el puerto serial
-
-}
 */
 
 // ------------------------------------------------------------------------------------------------------------------
