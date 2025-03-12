@@ -1,14 +1,14 @@
 #include <Arduino.h>
 #define LED_BUILTIN 2
-#define DELAY_TIME 500  // Cambié el nombre de la constante para evitar confusión con la función delay()
+#define DELAY_TIME 500  // Canviem el nom de la constant per evitar possibles confusions
 
 void setup() {
-    pinMode(LED_BUILTIN, OUTPUT);  // Definir el pin del LED como salida
+    pinMode(LED_BUILTIN, OUTPUT);  // Definim el pin on situem el LED com a pin de sortida
 }
 
 void loop() {
-    digitalWrite(LED_BUILTIN, HIGH);  // Encender el LED
-    delay(DELAY_TIME);  // Esperar un tiempo
-    digitalWrite(LED_BUILTIN, LOW);   // Apagar el LED
-    delay(DELAY_TIME);  // Esperar un tiempo
+    digitalWrite(LED_BUILTIN, HIGH);  // Encenem el LED
+    delay(DELAY_TIME);  // Esperem el temps determinat (500 ms)
+    digitalWrite(LED_BUILTIN, LOW);   // Apaguem el LED
+    delay(DELAY_TIME);  // Esperem el temps determinat (500 ms)
 }
